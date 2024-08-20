@@ -17,8 +17,9 @@ public class PostController {
     }
 
     @GetMapping("/posts")
-    public CollectionModel<Post> all() {
+    public List<Post> all() {
         List<Post> posts = postService.getAllPosts();
-        return CollectionModel.of(posts);
+//        return CollectionModel.of(posts);
+        return posts;
     }
 }
